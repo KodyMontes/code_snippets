@@ -96,17 +96,23 @@ class singlyLinkedList {
       return undefined;
     }
 
-    if (this.length === 1 && this.head.value === value) {
-      this.head = null;
-      this.tail = null;
-      this.length--;
-      return undefined;
-    }
 
     let previousNode = null;
     let currentNode = this.head;
 
     while (currentNode !== null) {
+      if (this.length === 1 && currentNode.value === value) {
+        this.head = null;
+        this.tail = null;
+        this.length--;
+        return undefined;
+      }
+      if (currentNode.value === value && currentNode.next === null) {
+        this.tail = previousNode;
+        previousNode.next = null;
+        this.length--;
+        return undefined;
+      }
       if (currentNode.value === value) {
         currentNode = currentNode.next;
         previousNode.next = currentNode;
