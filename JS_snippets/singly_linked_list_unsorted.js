@@ -7,7 +7,7 @@ class listNode {
   }
 }
 
-class singlyLinkedList {
+class singlyLinkedListUnsorted {
   constructor () {};
 
   head = null;
