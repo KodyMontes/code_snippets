@@ -8,11 +8,13 @@ class listNode {
 }
 
 class singlyLinkedListUnsorted {
-  constructor () {};
+  constructor () {
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
+  };
 
-  head = null;
-  tail = null;
-  length = 0;
+
 
   pushNode(value) {
     const newNode = new listNode(value);

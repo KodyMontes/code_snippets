@@ -2,18 +2,20 @@
 
 class ListNode {
   constructor(value) {
-    value = value;
-    next = null;
-    previous = null;
+    this.value = value;
+    this.next = null;
+    this.previous = null;
   }
 }
 
 class DoublyLinkedListUnsorted {
-  constructor () {}
+  constructor () {
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
+  }
 
-  head = null;
-  tail = null;
-  length = 0;
+  
 
   addSingleNode(value) {
     const nodeToAdd = new ListNode(value);

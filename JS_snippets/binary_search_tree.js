@@ -2,15 +2,15 @@
 
 class leafNode {
   constructor(value) {
-    value: value;
-    left: null;
-    right: null;
+    this.value = value;
+    this.left = null;
+    this.right = null;
   }
 }
 
 class binarySearchTree {
   constructor() {
-    root: null;
+    this.root = null;
   };
 
 
